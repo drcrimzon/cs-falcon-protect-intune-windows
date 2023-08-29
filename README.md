@@ -2,9 +2,15 @@
 
 CrowdStrike does not provide msi installer files to push via Intune.
 
-It's much easier and more reliable to use a powershell script to deploy Crowdstrike Falcon Protect to end-users.
+It's much easier and more reliable to use a powershell script to deploy Crowdstrike Falcon Protect to end-users. This script automatically downloads the latest installer and Client Install ID from CrowdStrike servers and installs the client.
 
 Here's the steps required to get it working.
+
+## Update [IntuneCrowdstrike.ps1](IntuneCrowdstrike.ps1)
+
+1. Login to CrowdStrike Falcon Control
+2. Under Support and resources, create OAuth2 API Client
+3. Populate the BASE_URL, CLIENT_ID and CLIENT_SECRET in [IntuneCrowdstrike.ps1](IntuneCrowdstrike.ps1) with the values from the API Clients and Keys page
 
 ## Deployment Script
 
